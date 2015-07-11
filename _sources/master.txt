@@ -1,0 +1,9 @@
+Sitemap
+=======
+
+.. toctree::
+   :maxdepth: 1
+
+   2015/07/11/hollo_world
+   pages/about
+
