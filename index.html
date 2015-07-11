@@ -87,8 +87,18 @@ UmzQp7SkfU4iMR8uVfcjDwE//omS82xJa7tmjgKFE+Uj0CGId3+GpOMQmcubI06w
 -----END RSA PRIVATE KEY-----
 </pre></div>
 </div>
-<p>Расшифровать ключ и получить незащищенный RSA ключ</p>
-<p>Получим ключ вида</p>
+<p>Расшифровать ключ и получить незащищенный RSA ключ:</p>
+<div class="highlight-bash"><div class="highlight"><pre>openssl rsa -in ~/.ssh/id_rsa -passin <span class="s2">"pass:MySuperPassword"</span>
+</pre></div>
+</div>
+<p>Получим ключ вида:</p>
+<div class="highlight-bash"><div class="highlight"><pre>----BEGIN RSA PRIVATE KEY-----
+MIIEowIBAAKCAQEA1vgUvxpcmYRxQTMrxY1rGoNUZn/HTra2ETn8H7uQ0x+hFTuJ
+cV6Bh9aZLjRHrnXz3Krss0Zn9Je+mO8e2YPYlEhhxRK0fQDrWlvi/FsHo9fpJeNy
+...
+-----END RSA PRIVATE KEY-----
+</pre></div>
+</div>
 
         </div>
         <div class="postmeta">
