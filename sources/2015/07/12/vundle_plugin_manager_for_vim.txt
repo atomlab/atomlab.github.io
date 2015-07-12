@@ -1,0 +1,18 @@
+Vundle. Plugin manager for Vim
+==============================
+
+`Vundle <https://github.com/gmarik/vundle/>`_ — это пакетный менеджер для Vim, такой же как Bundler для Ruby. Он организует структуру каталогов, а также позволяет:
+
+* отслеживать и настраивать плагины прямо в. vimrc
+* устанавливать и обновлять плагины
+* удобно искать плагины(vim-scripts.org, github)
+* удалять неиспользуемые плагины
+
+
+*Source:*
+* Статья про Vundle на Хабре - http://habrahabr.ru/post/148549/
+
+.. author:: default
+.. categories:: none
+.. tags:: none
+.. comments::
