@@ -7,5 +7,4 @@ Sitemap
    2015/07/12/restructured_text_rest_and_sphinx_cheatsheet
    2015/07/12/tinkerer_static_website_generator
    2015/07/11/ecryption_rsa_key_to_password
-   pages/about
 
