@@ -9,7 +9,7 @@ Vundle. Plugin manager for Vim
 * удалять неиспользуемые плагины
 
 
-*Source:*
+**Source:**
 * Статья про Vundle на Хабре - http://habrahabr.ru/post/148549/
 
 .. author:: default
