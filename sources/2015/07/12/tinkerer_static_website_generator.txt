@@ -21,4 +21,4 @@ It allows blogging in reStructuredText format, comes with out-of-the-box support
 
     apt-get install python-lxml
 
-NOTES: При размещении сайта на Github Pages использовать `Sphinx-to-github`_
+NOTES: При размещении сайта на Github Pages использовать `Sphinx-to-github <http://atomlab.github.io/2015/07/12/sphinx_to_github.html>`_
