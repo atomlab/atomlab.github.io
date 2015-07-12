@@ -8,6 +8,52 @@
         <pubDate>Sun, 12 Jul 2015 00:00:00 +0300</pubDate>
         
         <item>
+            <link>http://atomlab.github.io/2015/07/12/grep_ip_with_use_regex_pattern.html</link>
+            <guid>http://atomlab.github.io/2015/07/12/grep_ip_with_use_regex_pattern.html</guid>
+            <title><![CDATA[Grep ip with use regex pattern]]></title>
+            <description><![CDATA[<h1>Grep ip with use regex pattern</h1>
+<p><strong>Example1</strong>:</p>
+<div class="highlight-python"><div class="highlight"><pre>line='inet 192.168.2.13 netmask 0xffffff00 broadcast 192.168.2.256'
+
+echo "$line" | grep -oE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b"
+</pre></div>
+</div>
+<p>Results:</p>
+<div class="highlight-python"><div class="highlight"><pre>192.168.2.13
+192.168.2.256
+</pre></div>
+</div>
+<p><strong>Example2</strong>:</p>
+<div class="highlight-python"><div class="highlight"><pre>line='inet 192.168.0.255 netmask 0xffffff00 broadcast 192.168.2.256'
+
+echo "$line" | grep -oE "\b(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b"
+</pre></div>
+</div>
+<p>Results:</p>
+<div class="highlight-python"><div class="highlight"><pre>192.168.0.255
+</pre></div>
+</div>
+<p><strong>Example3</strong>:</p>
+<div class="highlight-python"><div class="highlight"><pre>line='inet 192.168.0.255 netmask 0xffffff00 broadcast 192.168.2.256'
+
+echo "$line" | awk -v OFS="\n" '{ print $2, $NF }'
+</pre></div>
+</div>
+<p>Results:</p>
+<div class="highlight-python"><div class="highlight"><pre>192.168.0.255
+192.168.2.256
+</pre></div>
+</div>
+<p>Ссылки:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.regular-expressions.info/wordboundaries.html">http://www.regular-expressions.info/wordboundaries.html</a></li>
+<li><a class="reference external" href="http://stackoverflow.com/questions/11482951/extracting-ip-address-from-a-line-from-ifconfig-output-with-grep">http://stackoverflow.com/questions/11482951/extracting-ip-address-from-a-line-from-ifconfig-output-with-grep</a></li>
+</ul>
+]]></description>
+             <pubDate>Sun, 12 Jul 2015 00:00:00 +0300</pubDate>
+        </item>
+    
+        <item>
             <link>http://atomlab.github.io/2015/07/12/solarized.html</link>
             <guid>http://atomlab.github.io/2015/07/12/solarized.html</guid>
             <title><![CDATA[Solarized color scheme]]></title>

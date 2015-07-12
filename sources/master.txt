@@ -4,6 +4,7 @@ Sitemap
 .. toctree::
    :maxdepth: 1
 
+   2015/07/12/grep_ip_with_use_regex_pattern
    2015/07/12/solarized
    2015/07/12/yakuake_solarized
    2015/07/12/vim
