@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+    <channel>
+        <title>it.atomwiki</title>
+        <link>http://atomlab.github.io/</link>
+        <description></description>
+        <language>en-us</language>
+        <pubDate>Sun, 12 Jul 2015 00:00:00 +0300</pubDate>
+        
+        <item>
+            <link>http://atomlab.github.io/2015/07/12/grep_ip_with_use_regex_pattern.html</link>
+            <guid>http://atomlab.github.io/2015/07/12/grep_ip_with_use_regex_pattern.html</guid>
+            <title><![CDATA[Grep ip with use regex pattern]]></title>
+            <description><![CDATA[<h1>Grep ip with use regex pattern</h1>
+<p><strong>Example1</strong>:</p>
+<div class="highlight-python"><div class="highlight"><pre>line='inet 192.168.2.13 netmask 0xffffff00 broadcast 192.168.2.256'
+
+echo "$line" | grep -oE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b"
+</pre></div>
+</div>
+<p>Results:</p>
+<div class="highlight-python"><div class="highlight"><pre>192.168.2.13
+192.168.2.256
+</pre></div>
+</div>
+<p><strong>Example2</strong>:</p>
+<div class="highlight-python"><div class="highlight"><pre>line='inet 192.168.0.255 netmask 0xffffff00 broadcast 192.168.2.256'
+
+echo "$line" | grep -oE "\b(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b"
+</pre></div>
+</div>
+<p>Results:</p>
+<div class="highlight-python"><div class="highlight"><pre>192.168.0.255
+</pre></div>
+</div>
+<p><strong>Example3</strong>:</p>
+<div class="highlight-python"><div class="highlight"><pre>line='inet 192.168.0.255 netmask 0xffffff00 broadcast 192.168.2.256'
+
+echo "$line" | awk -v OFS="\n" '{ print $2, $NF }'
+</pre></div>
+</div>
+<p>Results:</p>
+<div class="highlight-python"><div class="highlight"><pre>192.168.0.255
+192.168.2.256
+</pre></div>
+</div>
+<p>Ссылки:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.regular-expressions.info/wordboundaries.html">http://www.regular-expressions.info/wordboundaries.html</a></li>
+<li><a class="reference external" href="http://stackoverflow.com/questions/11482951/extracting-ip-address-from-a-line-from-ifconfig-output-with-grep">http://stackoverflow.com/questions/11482951/extracting-ip-address-from-a-line-from-ifconfig-output-with-grep</a></li>
+</ul>
+]]></description>
+             <pubDate>Sun, 12 Jul 2015 00:00:00 +0300</pubDate>
+        </item>
+    
+        <item>
+            <link>http://atomlab.github.io/2015/07/12/solarized.html</link>
+            <guid>http://atomlab.github.io/2015/07/12/solarized.html</guid>
+            <title><![CDATA[Solarized color scheme]]></title>
+            <description><![CDATA[<h1>Solarized color scheme</h1>
+<ul class="simple">
+<li><a class="reference external" href="http://ethanschoonover.com/solarized">Solarized official site</a></li>
+<li><a class="reference external" href="https://github.com/altercation/solarized/tree/master/vim-colors-solarized">vim-colors-solarized</a></li>
+<li><a class="reference external" href="https://github.com/zealot128/yakuake-solarized">yakuake-solarized</a></li>
+</ul>
+]]></description>
+             <pubDate>Sun, 12 Jul 2015 00:00:00 +0300</pubDate>
+        </item>
+    
+        <item>
+            <link>http://atomlab.github.io/2015/07/12/sphinx_to_github.html</link>
+            <guid>http://atomlab.github.io/2015/07/12/sphinx_to_github.html</guid>
+            <title><![CDATA[Sphinx-to-github]]></title>
+            <description><![CDATA[<h1>Sphinx-to-github</h1>
+<blockquote>
+<div><a class="reference external" href="https://github.com/michaeljones/sphinx-to-github">sphinx-to-github</a> - Sphinx extension &amp; script to prepare Sphinx html output for github pages.</div></blockquote>
+<p>Некоторые генераторы статических сайтов используют <a class="reference external" href="http://sphinx-doc.org/">sphinx</a>. При попытке выложить статический сайт на Github pages столкнулся с тем, Github <a class="reference external" href="https://help.github.com/articles/files-that-start-with-an-underscore-are-missing/">не работает</a> с каталогами, которые начинаются с “_”. Утилита Sphinx-to-github при генерации сайта, адаптирует сайт под Github Pages удаляя символы подчеркивания “_” везде где нужно.</p>
+<p><strong>Как использовать:</strong></p>
+<ul class="simple">
+<li>Скачать файл <a class="reference external" href="https://raw.githubusercontent.com/michaeljones/sphinx-to-github/master/sphinxtogithub/sphinxtogithub.py">sphinxtogithub.py</a>.</li>
+<li>Разместить в корне сайта с исходниками.</li>
+<li>В conf.py добавить</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
+<span class="kn">import</span> <span class="nn">sphinxtogithub</span>
+<span class="o">...</span>
+<span class="c"># Добавить 'sphinxtogithub' в массив с другими расширениями</span>
+<span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s">'sphinxtogithub'</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><strong>Source:</strong></p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/blog/572-bypassing-jekyll-on-github-pages">https://github.com/blog/572-bypassing-jekyll-on-github-pages</a></li>
+<li><a class="reference external" href="https://help.github.com/articles/files-that-start-with-an-underscore-are-missing/">https://help.github.com/articles/files-that-start-with-an-underscore-are-missing/</a></li>
+</ul>
+]]></description>
+             <pubDate>Sun, 12 Jul 2015 00:00:00 +0300</pubDate>
+        </item>
+    
+        <item>
+            <link>http://atomlab.github.io/2015/07/12/vundle_plugin_manager_for_vim.html</link>
+            <guid>http://atomlab.github.io/2015/07/12/vundle_plugin_manager_for_vim.html</guid>
+            <title><![CDATA[Vundle. Plugin manager for Vim]]></title>
+            <description><![CDATA[<h1>Vundle. Plugin manager for Vim</h1>
+<p><a class="reference external" href="https://github.com/gmarik/vundle/">Vundle</a> — это пакетный менеджер для Vim, такой же как Bundler для Ruby. Он организует структуру каталогов, а также позволяет:</p>
+<ul class="simple">
+<li>отслеживать и настраивать плагины прямо в. vimrc</li>
+<li>устанавливать и обновлять плагины</li>
+<li>удобно искать плагины(vim-scripts.org, github)</li>
+<li>удалять неиспользуемые плагины</li>
+</ul>
+<p><strong>Source:</strong></p>
+<ul class="simple">
+<li>Статья про Vundle на Хабре - <a class="reference external" href="http://habrahabr.ru/post/148549/">http://habrahabr.ru/post/148549/</a></li>
+</ul>
+]]></description>
+             <pubDate>Sun, 12 Jul 2015 00:00:00 +0300</pubDate>
+        </item>
+    
+        <item>
+            <link>http://atomlab.github.io/2015/07/12/restructured_text_rest_and_sphinx_cheatsheet.html</link>
+            <guid>http://atomlab.github.io/2015/07/12/restructured_text_rest_and_sphinx_cheatsheet.html</guid>
+            <title><![CDATA[Restructured Text (reST) and Sphinx CheatSheet]]></title>
+            <description><![CDATA[<h1>Restructured Text (reST) and Sphinx CheatSheet</h1>
+<p><a class="reference external" href="http://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html">http://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html</a></p>
+]]></description>
+             <pubDate>Sun, 12 Jul 2015 00:00:00 +0300</pubDate>
+        </item>
+    
+        <item>
+            <link>http://atomlab.github.io/2015/07/12/tinkerer_static_website_generator.html</link>
+            <guid>http://atomlab.github.io/2015/07/12/tinkerer_static_website_generator.html</guid>
+            <title><![CDATA[Tinkerer - static website generator]]></title>
+            <description><![CDATA[<h1>Tinkerer - static website generator</h1>
+<p><a class="reference external" href="http://tinkerer.me/">Tinkerer</a> is a blogging engine/static website generator powered by <a class="reference external" href="http://sphinx-doc.org/">Sphinx</a>.
+It allows blogging in reStructuredText format, comes with out-of-the-box support for post publishing dates, authors, categories, tags, post archive, RSS feed generation, comments powered by Disqus and more. Tinkerer is also highly customizable through Sphinx extensions.</p>
+<p><strong>Утановка</strong></p>
+<div class="highlight-python"><div class="highlight"><pre>pip install tinkerer
+</pre></div>
+</div>
+<p>Из зависимостей понадобится установить python-lxml.</p>
+<div class="highlight-python"><div class="highlight"><pre>apt-get install python-lxml
+</pre></div>
+</div>
+<p>NOTES: При размещении сайта на Github Pages использовать <a class="reference external" href="http://atomlab.github.io/2015/07/12/sphinx_to_github.html">Sphinx-to-github</a></p>
+]]></description>
+             <pubDate>Sun, 12 Jul 2015 00:00:00 +0300</pubDate>
+        </item>
+    
+        <item>
+            <link>http://atomlab.github.io/2015/07/11/ecryption_rsa_key_to_password.html</link>
+            <guid>http://atomlab.github.io/2015/07/11/ecryption_rsa_key_to_password.html</guid>
+            <title><![CDATA[Ecryption RSA key to password]]></title>
+            <description><![CDATA[<h1>Ecryption RSA key to password</h1>
+<p>Сгенерировать обычный RSA ключ и защитить паролем:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ssh-keygen -t rsa -N <span class="s2">"MysuperPassword"</span> -f ~/.ssh/id_rsa
+</pre></div>
+</div>
+<p>Получаем ключ вида:</p>
+<div class="highlight-bash"><div class="highlight"><pre>-----BEGIN RSA PRIVATE KEY-----
+Proc-Type: 4,ENCRYPTED
+DEK-Info: AES-128-CBC,43F643F4C5D3215A71821861F0452531
+
+wXVZb2bkuTClO2zeLOO0nczNdZyRZ5pj7QLGvuBqYDbMm88bK9oVkeaEIxXd9OQ7
+UmzQp7SkfU4iMR8uVfcjDwE//omS82xJa7tmjgKFE+Uj0CGId3+GpOMQmcubI06w
+...
+-----END RSA PRIVATE KEY-----
+</pre></div>
+</div>
+<p>Расшифровать ключ и получить незащищенный RSA ключ:</p>
+<div class="highlight-bash"><div class="highlight"><pre>openssl rsa -in ~/.ssh/id_rsa -passin <span class="s2">"pass:MySuperPassword"</span>
+</pre></div>
+</div>
+<p>Получим ключ вида:</p>
+<div class="highlight-bash"><div class="highlight"><pre>----BEGIN RSA PRIVATE KEY-----
+MIIEowIBAAKCAQEA1vgUvxpcmYRxQTMrxY1rGoNUZn/HTra2ETn8H7uQ0x+hFTuJ
+cV6Bh9aZLjRHrnXz3Krss0Zn9Je+mO8e2YPYlEhhxRK0fQDrWlvi/FsHo9fpJeNy
+...
+-----END RSA PRIVATE KEY-----
+</pre></div>
+</div>
+]]></description>
+             <pubDate>Sat, 11 Jul 2015 00:00:00 +0300</pubDate>
+        </item>
+    
+    </channel>
+</rss>

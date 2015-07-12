@@ -1,0 +1,33 @@
+Sphinx-to-github
+================
+
+ `sphinx-to-github <https://github.com/michaeljones/sphinx-to-github>`_ - Sphinx extension & script to prepare Sphinx html output for github pages.
+
+Некоторые генераторы статических сайтов используют `sphinx <http://sphinx-doc.org/>`_. При попытке выложить статический сайт на Github pages столкнулся с тем, Github `не работает <https://help.github.com/articles/files-that-start-with-an-underscore-are-missing/>`_ с каталогами, которые начинаются с "_". Утилита Sphinx-to-github при генерации сайта, адаптирует сайт под Github Pages удаляя символы подчеркивания "_" везде где нужно.
+
+**Как использовать:**
+
+* Скачать файл `sphinxtogithub.py <https://raw.githubusercontent.com/michaeljones/sphinx-to-github/master/sphinxtogithub/sphinxtogithub.py>`_.
+* Разместить в корне сайта с исходниками.
+* В conf.py добавить
+
+::
+
+    import sys
+    import os
+    sys.path.append(os.getcwd())
+    import sphinxtogithub
+    ...
+    # Добавить 'sphinxtogithub' в массив с другими расширениями
+    extensions = ['sphinxtogithub']
+
+**Source:**
+
+* https://github.com/blog/572-bypassing-jekyll-on-github-pages
+* https://help.github.com/articles/files-that-start-with-an-underscore-are-missing/
+
+
+.. author:: default
+.. categories:: none
+.. tags:: none
+.. comments::
