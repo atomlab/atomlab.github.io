@@ -10,6 +10,7 @@ Vundle. Plugin manager for Vim
 
 
 **Source:**
+
 * Статья про Vundle на Хабре - http://habrahabr.ru/post/148549/
 
 .. author:: default
