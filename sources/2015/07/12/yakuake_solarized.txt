@@ -1,0 +1,9 @@
+yakuake-solarized
+=================
+
+https://github.com/zealot128/yakuake-solarized
+
+.. author:: default
+.. categories:: none
+.. tags:: none
+.. comments::
