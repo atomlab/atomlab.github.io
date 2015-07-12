@@ -21,3 +21,4 @@ It allows blogging in reStructuredText format, comes with out-of-the-box support
 
     apt-get install python-lxml
 
+NOTES: При размещении сайта на Github Pages использовать `Sphinx-to-github`_
