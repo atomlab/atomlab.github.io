@@ -1,5 +1,5 @@
-Solarized
-=========
+Solarized color scheme
+======================
 
 * `Solarized official site <http://ethanschoonover.com/solarized>`_
 * `vim-colors-solarized <https://github.com/altercation/solarized/tree/master/vim-colors-solarized>`_
