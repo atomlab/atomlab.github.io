@@ -17,7 +17,8 @@ Sphinx-to-github
     sys.path.append(os.getcwd())
     import sphinxtogithub
     ...
-    extensions = ['sphinxtogithub'] # Добавить 'sphinxtogithub' в массив с другими расширениями
+    # Добавить 'sphinxtogithub' в массив с другими расширениями
+    extensions = ['sphinxtogithub']
 
 Source:
 
