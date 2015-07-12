@@ -3,7 +3,8 @@
 
 **Plugins**
 
-`YouCompleteMe <https://github.com/Valloric/YouCompleteMe>`_
+* `YouCompleteMe <https://github.com/Valloric/YouCompleteMe>`_
+
 Из зависимостей, в системе должны быть установлены пакеты::
 
     atittude install llvm build-essential cmake
