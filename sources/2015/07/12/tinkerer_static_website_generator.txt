@@ -6,8 +6,6 @@ Tinkerer - static website generator
 .. tags:: none
 .. comments::
 
-
-
 `Tinkerer <http://tinkerer.me/>`_ is a blogging engine/static website generator powered by `Sphinx <http://sphinx-doc.org/>`_.
 It allows blogging in reStructuredText format, comes with out-of-the-box support for post publishing dates, authors, categories, tags, post archive, RSS feed generation, comments powered by Disqus and more. Tinkerer is also highly customizable through Sphinx extensions.
 

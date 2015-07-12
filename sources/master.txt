@@ -4,10 +4,7 @@ Sitemap
 .. toctree::
    :maxdepth: 1
 
-<<<<<<< HEAD
    2015/07/12/tinkerer_static_website_generator
-=======
->>>>>>> 4cb38c00fd942e0877fc27b212f6f32c9171716d
    2015/07/11/ecryption_rsa_key_to_password
    2015/07/11/hollo_world
    pages/about
