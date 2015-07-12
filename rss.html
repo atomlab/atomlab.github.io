@@ -8,6 +8,34 @@
         <pubDate>Sun, 12 Jul 2015 00:00:00 +0300</pubDate>
         
         <item>
+            <link>http://atomlab.github.io/2015/07/12/sphinx_to_github.html</link>
+            <guid>http://atomlab.github.io/2015/07/12/sphinx_to_github.html</guid>
+            <title><![CDATA[Sphinx-to-github]]></title>
+            <description><![CDATA[<h1>Sphinx-to-github</h1>
+<blockquote>
+<div><a class="reference external" href="https://github.com/michaeljones/sphinx-to-github">sphinx-to-github</a> - Sphinx extension &amp; script to prepare Sphinx html output for github pages.</div></blockquote>
+<p>Некоторые генераторы статических сайтов используют <a class="reference external" href="http://sphinx-doc.org/">sphinx</a>. При попытке выложить статический сайт на Github pages столкнулся с тем, Github <cite>не работает &lt;https://help.github.com/articles/files-that-start-with-an-underscore-are-missing/&gt;_</cite> с каталогами, которые начинаются с “_”. Утилита Sphinx-to-github при генерации сайта, адаптирует сайт под Github Pages удаляя символы подчеркивания “_” везде где нужно.</p>
+<p><strong>Как использовать:</strong>
+* Скачать файл <a class="reference external" href="https://raw.githubusercontent.com/michaeljones/sphinx-to-github/master/sphinxtogithub/sphinxtogithub.py">sphinxtogithub.py</a>.
+* Разместить в корне сайта с исходниками.
+* В conf.py добавить</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
+<span class="kn">import</span> <span class="nn">sphinxtogithub</span>
+<span class="o">...</span>
+<span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s">'sphinxtogithub'</span><span class="p">]</span> <span class="c"># Добавить 'sphinxtogithub' в массив с другими расширениями</span>
+</pre></div>
+</div>
+<p>Source:</p>
+<blockquote>
+<div><a class="reference external" href="https://github.com/blog/572-bypassing-jekyll-on-github-pages">https://github.com/blog/572-bypassing-jekyll-on-github-pages</a>
+<a class="reference external" href="https://help.github.com/articles/files-that-start-with-an-underscore-are-missing/">https://help.github.com/articles/files-that-start-with-an-underscore-are-missing/</a></div></blockquote>
+]]></description>
+             <pubDate>Sun, 12 Jul 2015 00:00:00 +0300</pubDate>
+        </item>
+    
+        <item>
             <link>http://atomlab.github.io/2015/07/12/vundle_plugin_manager_for_vim.html</link>
             <guid>http://atomlab.github.io/2015/07/12/vundle_plugin_manager_for_vim.html</guid>
             <title><![CDATA[Vundle. Plugin manager for Vim]]></title>
