@@ -1,0 +1,326 @@
+<!DOCTYPE html><!--[if lt IE 7]>      <html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:og="http://ogp.me/ns#"
+    xmlns:fb="https://www.facebook.com/2008/fbml" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:og="http://ogp.me/ns#"
+    xmlns:fb="https://www.facebook.com/2008/fbml" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:og="http://ogp.me/ns#"
+    xmlns:fb="https://www.facebook.com/2008/fbml" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:og="http://ogp.me/ns#"
+    xmlns:fb="https://www.facebook.com/2008/fbml" class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="it notes">
+        <meta name="viewport" content="width=device-width">
+        <title>Home &mdash; it.atomwiki</title>
+            <link rel="stylesheet" href="static/normalize.css" type="text/css">
+            <link rel="stylesheet" href="static/sphinx.css" type="text/css">
+            <link rel="stylesheet" href="static/main.css" type="text/css">
+            <link rel="stylesheet" href="static/dark.css" type="text/css">
+            <link rel="stylesheet" href="static/pygments.css" type="text/css" />
+            <link rel="stylesheet" href="static/font-awesome.min.css" type="text/css">
+        <link rel="shortcut icon" href="static/tinkerer.ico" /><!-- Load modernizr and JQuery -->
+        <script src="static/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="static/vendor/jquery-1.8.2.min.js"><\/script>')</script>
+        <script src="static/plugins.js"></script>
+        <script src="static/main.js"></script>
+        <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.html" /><script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '1.5',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script><script type="text/javascript" src="static/underscore.js"></script><script type="text/javascript" src="static/doctools.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // Adjusts document height if sidebar is taller
+            var documentwrapper = document.getElementsByTagName('article')[0];
+            var sidebar = document.getElementsByTagName('aside')[0];
+
+            if (sidebar.offsetHeight > documentwrapper.offsetHeight)
+            {
+                documentwrapper.style.minHeight = sidebar.offsetHeight + "px";
+            }
+
+            // Scroll to content if on small screen
+            if (screen.width < 480)
+            {
+                $(document).scrollTop(documentwrapper.offsetTop - 44);
+            }
+        });
+    </script></head>
+    <body role="document">
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+      <div id="container"><div class="header-container">
+    <header class="wrapper clearfix" role="banner">
+        <div class="title">
+          <h1><a href="#">it.atomwiki</a></h1>
+          <h4></h4>
+        </div>
+        <nav role="navigation">
+          <ul>
+            <li class="main-nav">
+              <a href="#">Home</a>
+            </li>
+            <li class="quicklink"><div class="rss">
+        <a href="rss.html" title="Subscribe via RSS"><span class="fa fa-lg fa-rss"></span></a>
+    </div></li></ul>
+        </nav>
+    </header>
+</div>
+
+<div class="main-container" role="main"><div class="main wrapper body clearfix"><article role="article"><div class="timestamp postmeta">
+            <span>July 12, 2015</span>
+        </div>
+        <div class="section">
+            <h1><a href="2015/07/12/grep_ip_with_use_regex_pattern.html">Grep ip with use regex pattern</a></h1>
+<p><strong>Example1</strong>:</p>
+<div class="highlight-python"><div class="highlight"><pre>line='inet 192.168.2.13 netmask 0xffffff00 broadcast 192.168.2.256'
+
+echo "$line" | grep -oE "\b([0-9]{1,3}\.){3}[0-9]{1,3}\b"
+</pre></div>
+</div>
+<p>Results:</p>
+<div class="highlight-python"><div class="highlight"><pre>192.168.2.13
+192.168.2.256
+</pre></div>
+</div>
+<p><strong>Example2</strong>:</p>
+<div class="highlight-python"><div class="highlight"><pre>line='inet 192.168.0.255 netmask 0xffffff00 broadcast 192.168.2.256'
+
+echo "$line" | grep -oE "\b(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\b"
+</pre></div>
+</div>
+<p>Results:</p>
+<div class="highlight-python"><div class="highlight"><pre>192.168.0.255
+</pre></div>
+</div>
+<p><strong>Example3</strong>:</p>
+<div class="highlight-python"><div class="highlight"><pre>line='inet 192.168.0.255 netmask 0xffffff00 broadcast 192.168.2.256'
+
+echo "$line" | awk -v OFS="\n" '{ print $2, $NF }'
+</pre></div>
+</div>
+<p>Results:</p>
+<div class="highlight-python"><div class="highlight"><pre>192.168.0.255
+192.168.2.256
+</pre></div>
+</div>
+<p>Ссылки:</p>
+<ul class="simple">
+<li><a class="reference external" href="http://www.regular-expressions.info/wordboundaries.html">http://www.regular-expressions.info/wordboundaries.html</a></li>
+<li><a class="reference external" href="http://stackoverflow.com/questions/11482951/extracting-ip-address-from-a-line-from-ifconfig-output-with-grep">http://stackoverflow.com/questions/11482951/extracting-ip-address-from-a-line-from-ifconfig-output-with-grep</a></li>
+</ul>
+
+        </div>
+        <div class="postmeta">
+        <div class="author">
+            <span>Posted by atomlab</span>
+        </div>
+        
+        
+        </div><div class="separator post_separator"></div><div class="timestamp postmeta">
+            <span>July 12, 2015</span>
+        </div>
+        <div class="section">
+            <h1><a href="2015/07/12/solarized.html">Solarized color scheme</a></h1>
+<ul class="simple">
+<li><a class="reference external" href="http://ethanschoonover.com/solarized">Solarized official site</a></li>
+<li><a class="reference external" href="https://github.com/altercation/solarized/tree/master/vim-colors-solarized">vim-colors-solarized</a></li>
+<li><a class="reference external" href="https://github.com/zealot128/yakuake-solarized">yakuake-solarized</a></li>
+</ul>
+
+        </div>
+        <div class="postmeta">
+        <div class="author">
+            <span>Posted by atomlab</span>
+        </div>
+        
+        
+        </div><div class="separator post_separator"></div><div class="timestamp postmeta">
+            <span>July 12, 2015</span>
+        </div>
+        <div class="section">
+            <h1><a href="2015/07/12/vim.html">Тюнинг Vim</a></h1>
+<p><strong>Plugins</strong></p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/Valloric/YouCompleteMe">YouCompleteMe</a></li>
+</ul>
+<p>Из зависимостей, в системе должны быть установлены пакеты:</p>
+<div class="highlight-python"><div class="highlight"><pre>atittude install llvm build-essential cmake
+</pre></div>
+</div>
+
+        </div>
+        <div class="postmeta">
+        <div class="author">
+            <span>Posted by atomlab</span>
+        </div>
+        
+        
+        </div><div class="separator post_separator"></div><div class="timestamp postmeta">
+            <span>July 12, 2015</span>
+        </div>
+        <div class="section">
+            <h1><a href="2015/07/12/sphinx_to_github.html">Sphinx-to-github</a></h1>
+<blockquote>
+<div><a class="reference external" href="https://github.com/michaeljones/sphinx-to-github">sphinx-to-github</a> - Sphinx extension &amp; script to prepare Sphinx html output for github pages.</div></blockquote>
+<p>Некоторые генераторы статических сайтов используют <a class="reference external" href="http://sphinx-doc.org/">sphinx</a>. При попытке выложить статический сайт на Github pages столкнулся с тем, Github <a class="reference external" href="https://help.github.com/articles/files-that-start-with-an-underscore-are-missing/">не работает</a> с каталогами, которые начинаются с “_”. Утилита Sphinx-to-github при генерации сайта, адаптирует сайт под Github Pages удаляя символы подчеркивания “_” везде где нужно.</p>
+<p><strong>Как использовать:</strong></p>
+<ul class="simple">
+<li>Скачать файл <a class="reference external" href="https://raw.githubusercontent.com/michaeljones/sphinx-to-github/master/sphinxtogithub/sphinxtogithub.py">sphinxtogithub.py</a>.</li>
+<li>Разместить в корне сайта с исходниками.</li>
+<li>В conf.py добавить</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
+<span class="kn">import</span> <span class="nn">sphinxtogithub</span>
+<span class="o">...</span>
+<span class="c"># Добавить 'sphinxtogithub' в массив с другими расширениями</span>
+<span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s">'sphinxtogithub'</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><strong>Source:</strong></p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/blog/572-bypassing-jekyll-on-github-pages">https://github.com/blog/572-bypassing-jekyll-on-github-pages</a></li>
+<li><a class="reference external" href="https://help.github.com/articles/files-that-start-with-an-underscore-are-missing/">https://help.github.com/articles/files-that-start-with-an-underscore-are-missing/</a></li>
+</ul>
+
+        </div>
+        <div class="postmeta">
+        <div class="author">
+            <span>Posted by atomlab</span>
+        </div>
+        
+        
+        </div><div class="separator post_separator"></div><div class="timestamp postmeta">
+            <span>July 12, 2015</span>
+        </div>
+        <div class="section">
+            <h1><a href="2015/07/12/vundle_plugin_manager_for_vim.html">Vundle. Plugin manager for Vim</a></h1>
+<p><a class="reference external" href="https://github.com/gmarik/vundle/">Vundle</a> — это пакетный менеджер для Vim, такой же как Bundler для Ruby. Он организует структуру каталогов, а также позволяет:</p>
+<ul class="simple">
+<li>отслеживать и настраивать плагины прямо в. vimrc</li>
+<li>устанавливать и обновлять плагины</li>
+<li>удобно искать плагины(vim-scripts.org, github)</li>
+<li>удалять неиспользуемые плагины</li>
+</ul>
+<p><strong>Source:</strong></p>
+<ul class="simple">
+<li>Статья про Vundle на Хабре - <a class="reference external" href="http://habrahabr.ru/post/148549/">http://habrahabr.ru/post/148549/</a></li>
+</ul>
+
+        </div>
+        <div class="postmeta">
+        <div class="author">
+            <span>Posted by atomlab</span>
+        </div>
+        
+        
+        </div><div class="separator post_separator"></div><div class="timestamp postmeta">
+            <span>July 12, 2015</span>
+        </div>
+        <div class="section">
+            <h1><a href="2015/07/12/restructured_text_rest_and_sphinx_cheatsheet.html">Restructured Text (reST) and Sphinx CheatSheet</a></h1>
+<p><a class="reference external" href="http://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html">http://thomas-cokelaer.info/tutorials/sphinx/rest_syntax.html</a></p>
+
+        </div>
+        <div class="postmeta">
+        <div class="author">
+            <span>Posted by atomlab</span>
+        </div>
+        
+        
+        </div><div class="separator post_separator"></div><div class="timestamp postmeta">
+            <span>July 12, 2015</span>
+        </div>
+        <div class="section">
+            <h1><a href="2015/07/12/tinkerer_static_website_generator.html">Tinkerer - static website generator</a></h1>
+<p><a class="reference external" href="http://tinkerer.me/">Tinkerer</a> is a blogging engine/static website generator powered by <a class="reference external" href="http://sphinx-doc.org/">Sphinx</a>.
+It allows blogging in reStructuredText format, comes with out-of-the-box support for post publishing dates, authors, categories, tags, post archive, RSS feed generation, comments powered by Disqus and more. Tinkerer is also highly customizable through Sphinx extensions.</p>
+<p><strong>Утановка</strong></p>
+<div class="highlight-python"><div class="highlight"><pre>pip install tinkerer
+</pre></div>
+</div>
+<p>Из зависимостей понадобится установить python-lxml.</p>
+<div class="highlight-python"><div class="highlight"><pre>apt-get install python-lxml
+</pre></div>
+</div>
+<p>NOTES: При размещении сайта на Github Pages использовать <a class="reference external" href="http://atomlab.github.io/2015/07/12/sphinx_to_github.html">Sphinx-to-github</a></p>
+
+        </div>
+        <div class="postmeta">
+        <div class="author">
+            <span>Posted by atomlab</span>
+        </div>
+        
+        
+        </div><div class="separator post_separator"></div><div class="timestamp postmeta">
+            <span>July 11, 2015</span>
+        </div>
+        <div class="section">
+            <h1><a href="2015/07/11/ecryption_rsa_key_to_password.html">Ecryption RSA key to password</a></h1>
+<p>Сгенерировать обычный RSA ключ и защитить паролем:</p>
+<div class="highlight-bash"><div class="highlight"><pre>ssh-keygen -t rsa -N <span class="s2">"MysuperPassword"</span> -f ~/.ssh/id_rsa
+</pre></div>
+</div>
+<p>Получаем ключ вида:</p>
+<div class="highlight-bash"><div class="highlight"><pre>-----BEGIN RSA PRIVATE KEY-----
+Proc-Type: 4,ENCRYPTED
+DEK-Info: AES-128-CBC,43F643F4C5D3215A71821861F0452531
+
+wXVZb2bkuTClO2zeLOO0nczNdZyRZ5pj7QLGvuBqYDbMm88bK9oVkeaEIxXd9OQ7
+UmzQp7SkfU4iMR8uVfcjDwE//omS82xJa7tmjgKFE+Uj0CGId3+GpOMQmcubI06w
+...
+-----END RSA PRIVATE KEY-----
+</pre></div>
+</div>
+<p>Расшифровать ключ и получить незащищенный RSA ключ:</p>
+<div class="highlight-bash"><div class="highlight"><pre>openssl rsa -in ~/.ssh/id_rsa -passin <span class="s2">"pass:MySuperPassword"</span>
+</pre></div>
+</div>
+<p>Получим ключ вида:</p>
+<div class="highlight-bash"><div class="highlight"><pre>----BEGIN RSA PRIVATE KEY-----
+MIIEowIBAAKCAQEA1vgUvxpcmYRxQTMrxY1rGoNUZn/HTra2ETn8H7uQ0x+hFTuJ
+cV6Bh9aZLjRHrnXz3Krss0Zn9Je+mO8e2YPYlEhhxRK0fQDrWlvi/FsHo9fpJeNy
+...
+-----END RSA PRIVATE KEY-----
+</pre></div>
+</div>
+
+        </div>
+        <div class="postmeta">
+        <div class="author">
+            <span>Posted by atomlab</span>
+        </div>
+        
+        
+        </div><div class="archive_link">
+        <a href="archive.html"> &mdash; Blog Archive &mdash; </a>
+    </div></article><aside class="sidebar"><section><div class="widget" id="searchbox" role="search">
+    <h1><a href="#searchbox">Search</a></h1>
+    <form action="search.html" method="get">
+        <input type="text" name="q" />
+        <button type="submit"><span class="fa fa-search"></span></button>
+    </form>
+</div></section></aside></div> <!-- #main --></div> <!-- #main-container -->
+
+        <div class="footer-container" role="contentinfo"><footer class="wrapper">&copy; Copyright 2015, atomlab. Powered by <a href="http://www.tinkerer.me/">Tinkerer</a> and <a href="http://sphinx.pocoo.org/">Sphinx</a>.</footer></div> <!-- footer-container -->
+
+      </div> <!--! end of #container --><!--[if lt IE 7 ]>
+          <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.3/CFInstall.min.js"></script>
+          <script>window.attachEvent('onload',function(){CFInstall.check({mode:'overlay'})})</script>
+        <![endif]-->
+    </body>
+</html>
