@@ -3,7 +3,7 @@ Sphinx-to-github
 
  `sphinx-to-github <https://github.com/michaeljones/sphinx-to-github>`_ - Sphinx extension & script to prepare Sphinx html output for github pages.
 
-Некоторые генераторы статических сайтов используют `sphinx <http://sphinx-doc.org/>`_. При попытке выложить статический сайт на Github pages столкнулся с тем, Github `не работает <https://help.github.com/articles/files-that-start-with-an-underscore-are-missing/>_` с каталогами, которые начинаются с "_". Утилита Sphinx-to-github при генерации сайта, адаптирует сайт под Github Pages удаляя символы подчеркивания "_" везде где нужно.
+Некоторые генераторы статических сайтов используют `sphinx <http://sphinx-doc.org/>`_. При попытке выложить статический сайт на Github pages столкнулся с тем, Github `не работает <https://help.github.com/articles/files-that-start-with-an-underscore-are-missing/>`_ с каталогами, которые начинаются с "_". Утилита Sphinx-to-github при генерации сайта, адаптирует сайт под Github Pages удаляя символы подчеркивания "_" везде где нужно.
 
 **Как использовать:**
 
