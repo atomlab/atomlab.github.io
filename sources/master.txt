@@ -4,6 +4,7 @@ Sitemap
 .. toctree::
    :maxdepth: 1
 
+   2015/07/12/solarized
    2015/07/12/yakuake_solarized
    2015/07/12/vim
    2015/07/12/sphinx_to_github
