@@ -15,7 +15,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <meta name="description" content="it notes">
         <meta name="viewport" content="width=device-width">
-        <title>About &mdash; it.atomwiki</title>
+        <title>Documentation &mdash; it.atomwiki</title>
             <link rel="stylesheet" href="../static/normalize.css" type="text/css">
             <link rel="stylesheet" href="../static/sphinx.css" type="text/css">
             <link rel="stylesheet" href="../static/main.css" type="text/css">
@@ -73,10 +73,10 @@
               <a href="../index.html">Home</a>
             </li>
             <li class="main-nav">
-              <a href="#">About</a>
+              <a href="about.html">About</a>
             </li>
             <li class="main-nav">
-              <a href="documetation.html">Documentation</a>
+              <a href="#">Documentation</a>
             </li>
             <li class="quicklink"><div class="rss">
         <a href="../rss.html" title="Subscribe via RSS"><span class="fa fa-lg fa-rss"></span></a>
@@ -86,8 +86,99 @@
 </div>
 
 <div class="main-container" role="main"><div class="main wrapper body clearfix"><article role="article">
-    <div class="section" id="about">
-<h1>About</h1>
+    <div class="section" id="documentation">
+<h1>Documentation</h1>
+<div class="section" id="getting-started">
+<h2>Getting Started</h2>
+<div class="section" id="setup">
+<h3>Setup</h3>
+<p>After you installed the Tinkerer package, create your blog directory and cd
+into it:</p>
+<div class="highlight-bash"><div class="highlight"><pre>mkdir myblog
+<span class="nb">cd </span>myblog
+</pre></div>
+</div>
+<p>Run Tinkerer setup:</p>
+<div class="highlight-bash"><div class="highlight"><pre>tinker --setup
+</pre></div>
+</div>
+<p>There is some minimal configuration required in <span class="docutils literal"><span class="pre">conf.py</span></span>:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="c"># Change this to the name of your blog</span>
+<span class="n">project</span> <span class="o">=</span> <span class="s">&#39;My blog&#39;</span>
+
+<span class="c"># Change this to the tagline of your blog</span>
+<span class="n">tagline</span> <span class="o">=</span> <span class="s">&#39;Add intelligent tagline here&#39;</span>
+
+<span class="c"># Change this to the description of your blog</span>
+<span class="n">description</span> <span class="o">=</span> <span class="s">&#39;This is an awesome blog&#39;</span>
+
+<span class="c"># Change this to your name</span>
+<span class="n">author</span> <span class="o">=</span> <span class="s">&#39;Winston Smith&#39;</span>
+
+<span class="c"># Change this to your copyright string</span>
+<span class="n">copyright</span> <span class="o">=</span> <span class="s">&#39;1984, &#39;</span> <span class="o">+</span> <span class="n">author</span>
+
+<span class="c"># Change this to your blog root URL (required for RSS feed)</span>
+<span class="n">website</span> <span class="o">=</span> <span class="s">&#39;http://127.0.0.1/blog/html/&#39;</span>
+</pre></div>
+</div>
+<p><strong>project</strong></p>
+<blockquote>
+<div>This will be the name of your blog.</div></blockquote>
+<p><strong>tagline</strong></p>
+<blockquote>
+<div>The tagline is displayed right after the name of the blog and as the blog
+description in the RSS feed.</div></blockquote>
+<p><strong>description</strong></p>
+<blockquote>
+<div>This will be added to the <span class="docutils literal"><span class="pre">description</span></span> meta tag of your blog pages and
+will be consumed by search engines crawling your blog.</div></blockquote>
+<p><strong>author</strong></p>
+<blockquote>
+<div>Your name.</div></blockquote>
+<p><strong>copyright</strong></p>
+<blockquote>
+<div>The copyright string is displayed at the bottom of each page.</div></blockquote>
+<p><strong>website</strong></p>
+<blockquote>
+<div>The RSS feed requires the address of the website to properly link articles.</div></blockquote>
+</div>
+<div class="section" id="create-a-post">
+<h3>Create a post</h3>
+<p>From your blog root directory, call:</p>
+<div class="highlight-bash"><div class="highlight"><pre>tinker --post <span class="s1">&#39;Hello World!&#39;</span>
+</pre></div>
+</div>
+<p>Tinkerer will let you know where the file was created. You can edit it right
+away, using reStructuredText! Read more about <span class="xref std std-ref">posts</span>.</p>
+</div>
+<div class="section" id="create-a-page">
+<h3>Create a page</h3>
+<p>Create an <em>About</em> page to tell your readers about yourself. From your blog
+root directory, call:</p>
+<div class="highlight-bash"><div class="highlight"><pre>tinker --page <span class="s1">&#39;About&#39;</span>
+</pre></div>
+</div>
+<p>Tinkerer will let you know where the file was created. Read more about
+<span class="xref std std-ref">pages</span>.</p>
+</div>
+<div class="section" id="build-your-blog">
+<h3>Build your blog</h3>
+<p>From your blog root directory call:</p>
+<div class="highlight-bash"><div class="highlight"><pre>tinker --build
+</pre></div>
+</div>
+<p>Open the <span class="docutils literal"><span class="pre">index.html</span></span> file in your blog&#8217;s root to preview your blog. Read
+more about <span class="xref std std-ref">build</span>.</p>
+</div>
+</div>
+<div class="section" id="tinkerer-reference">
+<span id="id1"></span><h2>Tinkerer Reference</h2>
+<div class="toctree-wrapper compound">
+<ul class="simple">
+</ul>
+</div>
+</div>
 </div>
 
     <div class="postmeta">
