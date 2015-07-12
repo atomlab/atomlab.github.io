@@ -11,9 +11,13 @@ It allows blogging in reStructuredText format, comes with out-of-the-box support
 
 **Утановка**
 
+::
+
     pip install tinkerer
 
 Из зависимостей понадобится установить python-lxml.
+
+::
 
     apt-get install python-lxml
 
