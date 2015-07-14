@@ -28,7 +28,7 @@
         <script>window.jQuery || document.write('<script src="static/vendor/jquery-1.8.2.min.js"><\/script>')</script>
         <script src="static/plugins.js"></script>
         <script src="static/main.js"></script>
-        <link rel="alternate" type="application/rss+xml" title="RSS" href="rss.html" /><script type="text/javascript">
+        <link rel="next" title="Older" href="page2.html" /><link rel="alternate" type="application/rss+xml" title="RSS" href="rss.html" /><script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
         VERSION:     '1.5',
@@ -79,7 +79,24 @@
     </header>
 </div>
 
-<div class="main-container" role="main"><div class="main wrapper body clearfix"><article role="article"><div class="timestamp postmeta">
+<div class="main-container" role="main"><div class="main wrapper body clearfix"><article role="article"><ul class="related clearfix">
+            <li class="left"></li>
+            <li class="right"><a href="page2.html">Older</a> &raquo; </li>
+        </ul><div class="timestamp postmeta">
+            <span>July 14, 2015</span>
+        </div>
+        <div class="section">
+            <h1><a href="2015/07/14/terminal_color_scheme_designer.html">Terminal Color Scheme Designer</a></h1>
+<p><a class="reference external" href="http://ciembor.github.io/4bit/">4bit Terminal Color Scheme Designer</a> - Удобный подбор гаммы цветов для консоли с возможность сгенерировать и скачать конфиг для различных эмуляторов терминала.</p>
+
+        </div>
+        <div class="postmeta">
+        <div class="author">
+            <span>Posted by atomlab</span>
+        </div>
+        
+        
+        </div><div class="separator post_separator"></div><div class="timestamp postmeta">
             <span>July 14, 2015</span>
         </div>
         <div class="section">
@@ -295,49 +312,12 @@ It allows blogging in reStructuredText format, comes with out-of-the-box support
         </div>
         
         
-        </div><div class="separator post_separator"></div><div class="timestamp postmeta">
-            <span>July 11, 2015</span>
-        </div>
-        <div class="section">
-            <h1><a href="2015/07/11/ecryption_rsa_key_to_password.html">Ecryption RSA key to password</a></h1>
-<p>Сгенерировать обычный RSA ключ и защитить паролем:</p>
-<div class="highlight-bash"><div class="highlight"><pre>ssh-keygen -t rsa -N <span class="s2">"MysuperPassword"</span> -f ~/.ssh/id_rsa
-</pre></div>
-</div>
-<p>Получаем ключ вида:</p>
-<div class="highlight-bash"><div class="highlight"><pre>-----BEGIN RSA PRIVATE KEY-----
-Proc-Type: 4,ENCRYPTED
-DEK-Info: AES-128-CBC,43F643F4C5D3215A71821861F0452531
-
-wXVZb2bkuTClO2zeLOO0nczNdZyRZ5pj7QLGvuBqYDbMm88bK9oVkeaEIxXd9OQ7
-UmzQp7SkfU4iMR8uVfcjDwE//omS82xJa7tmjgKFE+Uj0CGId3+GpOMQmcubI06w
-...
------END RSA PRIVATE KEY-----
-</pre></div>
-</div>
-<p>Расшифровать ключ и получить незащищенный RSA ключ:</p>
-<div class="highlight-bash"><div class="highlight"><pre>openssl rsa -in ~/.ssh/id_rsa -passin <span class="s2">"pass:MySuperPassword"</span>
-</pre></div>
-</div>
-<p>Получим ключ вида:</p>
-<div class="highlight-bash"><div class="highlight"><pre>----BEGIN RSA PRIVATE KEY-----
-MIIEowIBAAKCAQEA1vgUvxpcmYRxQTMrxY1rGoNUZn/HTra2ETn8H7uQ0x+hFTuJ
-cV6Bh9aZLjRHrnXz3Krss0Zn9Je+mO8e2YPYlEhhxRK0fQDrWlvi/FsHo9fpJeNy
-...
------END RSA PRIVATE KEY-----
-</pre></div>
-</div>
-
-        </div>
-        <div class="postmeta">
-        <div class="author">
-            <span>Posted by atomlab</span>
-        </div>
-        
-        
         </div><div class="archive_link">
         <a href="archive.html"> &mdash; Blog Archive &mdash; </a>
-    </div></article><aside class="sidebar"><section><div class="widget" id="searchbox" role="search">
+    </div><ul class="related clearfix">
+            <li class="left"></li>
+            <li class="right"><a href="page2.html">Older</a> &raquo; </li>
+        </ul></article><aside class="sidebar"><section><div class="widget" id="searchbox" role="search">
     <h1><a href="#searchbox">Search</a></h1>
     <form action="search.html" method="get">
         <input type="text" name="q" />
