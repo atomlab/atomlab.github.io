@@ -4,11 +4,8 @@ Sitemap
 .. toctree::
    :maxdepth: 1
 
-<<<<<<< HEAD
    2015/07/14/psi_disable_status_changes_in_chat
-=======
    2015/07/14/bashrc_ps1_generator
->>>>>>> 422d680260557bde7616dd84006aaa43ac13f542
    2015/07/13/online_colorscheme_editor_for_vim
    2015/07/12/grep_ip_with_use_regex_pattern
    2015/07/12/solarized
