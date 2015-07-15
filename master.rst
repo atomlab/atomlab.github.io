@@ -4,6 +4,7 @@ Sitemap
 .. toctree::
    :maxdepth: 1
 
+   2015/07/15/test_post
    2015/07/14/vim_sublime
    2015/07/14/terminal_color_scheme_designer
    2015/07/14/psi_disable_status_changes_in_chat
