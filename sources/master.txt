@@ -1,0 +1,19 @@
+Sitemap
+=======
+
+.. toctree::
+   :maxdepth: 1
+
+   2015/07/14/vim_sublime
+   2015/07/14/terminal_color_scheme_designer
+   2015/07/14/psi_disable_status_changes_in_chat
+   2015/07/14/bashrc_ps1_generator
+   2015/07/13/online_colorscheme_editor_for_vim
+   2015/07/12/grep_ip_with_use_regex_pattern
+   2015/07/12/solarized
+   2015/07/12/sphinx_to_github
+   2015/07/12/vundle_plugin_manager_for_vim
+   2015/07/12/restructured_text_rest_and_sphinx_cheatsheet
+   2015/07/12/tinkerer_static_website_generator
+   2015/07/11/ecryption_rsa_key_to_password
+
