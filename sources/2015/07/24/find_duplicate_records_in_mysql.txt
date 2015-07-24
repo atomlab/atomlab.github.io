@@ -1,0 +1,15 @@
+Find duplicate records in MySQL
+===============================
+
+Example::
+
+    SELECT date FROM logs group by date having count(*) >= 2
+
+**Ссылки**
+
+http://stackoverflow.com/questions/854128/find-duplicate-records-in-mysql
+
+.. author:: default
+.. categories:: none
+.. tags:: none
+.. comments::
