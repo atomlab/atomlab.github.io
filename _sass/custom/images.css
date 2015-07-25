@@ -1,0 +1,13 @@
+.img_med {
+  text-align: center;
+  width: 100px;
+}
+img[alt="minipic"] { 
+  max-width:  20px; 
+  display: block;
+}
+.center-image
+{
+    margin: 0 auto;
+    display: block;
+}
