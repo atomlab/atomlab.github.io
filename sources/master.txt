@@ -4,6 +4,7 @@ Sitemap
 .. toctree::
    :maxdepth: 1
 
+   2015/07/27/driver_scape_windows_driver_download_center
    2015/07/27/readthedocs_org
    2015/07/24/find_duplicate_records_in_mysql
    2015/07/24/

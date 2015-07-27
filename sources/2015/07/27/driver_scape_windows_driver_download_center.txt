@@ -1,0 +1,12 @@
+Driver Scape - Windows Driver Download Center
+=============================================
+
+Изредка требуется.
+
+http://www.driverscape.com/ - ресурс с драйверами под Windows.
+
+
+.. author:: default
+.. categories:: none
+.. tags:: none
+.. comments::

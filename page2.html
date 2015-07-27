@@ -86,6 +86,42 @@
             <span>July 12, 2015</span>
         </div>
         <div class="section">
+            <h1><a href="2015/07/12/sphinx_to_github.html">Sphinx-to-github</a></h1>
+<blockquote>
+<div><a class="reference external" href="https://github.com/michaeljones/sphinx-to-github">sphinx-to-github</a> - Sphinx extension &amp; script to prepare Sphinx html output for github pages.</div></blockquote>
+<p>Некоторые генераторы статических сайтов используют <a class="reference external" href="http://sphinx-doc.org/">sphinx</a>. При попытке выложить статический сайт на Github pages столкнулся с тем, Github <a class="reference external" href="https://help.github.com/articles/files-that-start-with-an-underscore-are-missing/">не работает</a> с каталогами, которые начинаются с “_”. Утилита Sphinx-to-github при генерации сайта, адаптирует сайт под Github Pages удаляя символы подчеркивания “_” везде где нужно.</p>
+<p><strong>Как использовать:</strong></p>
+<ul class="simple">
+<li>Скачать файл <a class="reference external" href="https://raw.githubusercontent.com/michaeljones/sphinx-to-github/master/sphinxtogithub/sphinxtogithub.py">sphinxtogithub.py</a>.</li>
+<li>Разместить в корне сайта с исходниками.</li>
+<li>В conf.py добавить</li>
+</ul>
+<div class="highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">sys</span>
+<span class="kn">import</span> <span class="nn">os</span>
+<span class="n">sys</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">())</span>
+<span class="kn">import</span> <span class="nn">sphinxtogithub</span>
+<span class="o">...</span>
+<span class="c"># Добавить 'sphinxtogithub' в массив с другими расширениями</span>
+<span class="n">extensions</span> <span class="o">=</span> <span class="p">[</span><span class="s">'sphinxtogithub'</span><span class="p">]</span>
+</pre></div>
+</div>
+<p><strong>Source:</strong></p>
+<ul class="simple">
+<li><a class="reference external" href="https://github.com/blog/572-bypassing-jekyll-on-github-pages">https://github.com/blog/572-bypassing-jekyll-on-github-pages</a></li>
+<li><a class="reference external" href="https://help.github.com/articles/files-that-start-with-an-underscore-are-missing/">https://help.github.com/articles/files-that-start-with-an-underscore-are-missing/</a></li>
+</ul>
+
+        </div>
+        <div class="postmeta">
+        <div class="author">
+            <span>Posted by atomlab</span>
+        </div>
+        
+        
+        </div><div class="separator post_separator"></div><div class="timestamp postmeta">
+            <span>July 12, 2015</span>
+        </div>
+        <div class="section">
             <h1><a href="2015/07/12/vundle_plugin_manager_for_vim.html">Vundle. Plugin manager for Vim</a></h1>
 <p><a class="reference external" href="https://github.com/gmarik/vundle/">Vundle</a> — это пакетный менеджер для Vim, такой же как Bundler для Ruby. Он организует структуру каталогов, а также позволяет:</p>
 <ul class="simple">
