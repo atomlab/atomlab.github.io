@@ -1,0 +1,10 @@
+readthedocs.org
+===============
+
+
+`Read the Docs <https://readthedocs.org/>`_ служит для хранения документации, позволяет легко в ней ориентироваться и делает её доступной для полноценного поиска.
+
+.. author:: default
+.. categories:: none
+.. tags:: none
+.. comments::

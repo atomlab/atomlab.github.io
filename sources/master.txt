@@ -4,6 +4,7 @@ Sitemap
 .. toctree::
    :maxdepth: 1
 
+   2015/07/27/readthedocs_org
    2015/07/24/find_duplicate_records_in_mysql
    2015/07/24/
    2015/07/14/vim_sublime
