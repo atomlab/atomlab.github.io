@@ -1,0 +1,10 @@
+Plican - static site generator
+==============================
+
+`How I setup Pelican <http://terriyu.info/blog/posts/2013/07/pelican-setup/>`_
+
+
+.. author:: default
+.. categories:: none
+.. tags:: none
+.. comments::
