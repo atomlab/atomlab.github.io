@@ -1,0 +1,25 @@
+---
+layout: post
+title: "My first post"
+modified:
+categories:
+description:
+tags: []
+image:
+  feature:
+  credit:
+  creditlink:
+comments:
+share:
+date: 2015-08-01T03:27:53-04:00
+---
+
+My First Post
+
+{% highlight python %}
+def hello():
+    for i in list:
+        print i
+    return True
+{% endhighlight %}
+
