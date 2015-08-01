@@ -4,13 +4,37 @@
 <generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="http://atomlab.github.io/hpstr-jekyll-theme//feed.xml" />
 <link rel="alternate" type="text/html" href="http://atomlab.github.io/hpstr-jekyll-theme/" />
-<updated>2015-08-01T04:34:35-04:00</updated>
+<updated>2015-08-01T04:40:26-04:00</updated>
 <id>http://atomlab.github.io/hpstr-jekyll-theme//</id>
 <author>
   <name>Your Name</name>
   <uri>http://atomlab.github.io/hpstr-jekyll-theme//</uri>
   <email>you@email.com</email>
 </author>
+
+
+<entry>
+  <title type="html"><![CDATA[Как в git скопировать файлы из одной ветки в другую?]]></title>
+ <link rel="alternate" type="text/html" href="http://atomlab.github.io/hpstr-jekyll-theme//how-copy-files-from-a-branch-to-another-using-git/" />
+  <id>http://atomlab.github.io/hpstr-jekyll-theme//how-copy-files-from-a-branch-to-another-using-git</id>
+  <published>2015-08-01T04:35:51-04:00</published>
+  <updated>2015-08-01T04:35:51-04:00</updated>
+  <author>
+    <name>Your Name</name>
+    <uri>http://atomlab.github.io/hpstr-jekyll-theme/</uri>
+    <email>you@email.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;Нужно скопировать файл &lt;em&gt;foo&lt;/em&gt; из &lt;code&gt;master&lt;/code&gt; в &lt;code&gt;gh-pages&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-console&quot; data-lang=&quot;console&quot;&gt;&lt;span class=&quot;go&quot;&gt;git checkout gh-pages&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;git checkout master foo&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;git commit -m &amp;#39;Add file foo to gh-pages.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;http://atomlab.github.io/hpstr-jekyll-theme//how-copy-files-from-a-branch-to-another-using-git/&quot;&gt;Как в git скопировать файлы из одной ветки в другую?&lt;/a&gt; was originally published by Your Name at &lt;a href=&quot;http://atomlab.github.io/hpstr-jekyll-theme/&quot;&gt;Site Title&lt;/a&gt; on August 01, 2015.&lt;/p&gt;
+  </content>
+</entry>
 
 
 <entry>
