@@ -30,4 +30,4 @@ git checkout master ./
 
 **Ссылки:**
 
-http://stackoverflow.com/questions/17416691/how-can-i-copy-files-from-a-branch-to-another-using-git
+<http://stackoverflow.com/questions/17416691/how-can-i-copy-files-from-a-branch-to-another-using-git>
