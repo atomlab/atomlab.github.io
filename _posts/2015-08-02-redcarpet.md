@@ -34,7 +34,7 @@ print "Hello, world!"
 
 {% raw %}
 ```python
-puts "Hello, world!"
+print "Hello, world!"
 ```
 {% endraw %}
 
