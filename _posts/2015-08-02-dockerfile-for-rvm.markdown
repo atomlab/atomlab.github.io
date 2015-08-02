@@ -14,8 +14,6 @@ share:
 date: 2015-08-02T04:54:02-04:00
 ---
 
-
-
 {% highlight text %}
 
 #Template Dockerfile for Ruby projects
@@ -42,4 +40,6 @@ RUN ln -s  /usr/bin/nodejs  /usr/bin/node
 
 {% endhighlight %}
 
+**Ссылки**
 
+https://gist.github.com/atomlab/af1bd2b0c7819d5ec317
