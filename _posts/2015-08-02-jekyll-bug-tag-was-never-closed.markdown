@@ -49,7 +49,7 @@ def hello():
 При генерации сайта волучаем ошибку вида
 
 {% highlight console %}
-Liquid Exception: highlight tag was never closed in _posts/my-post.txt/#excerpt
+Liquid Exception: highlight tag was never closed in _posts/my-post.md/#excerpt
 {% endhighlight %}
 
 Лайфхак при этой ситуации это добавить в `_config.yml` строчку:
