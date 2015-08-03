@@ -23,7 +23,7 @@ gpg2 --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB
 curl -sSL https://get.rvm.io | bash -s stable --ruby
 {% endhighlight %}
 
-Если не в системе не хватает зависимостей, то rvm предложит автоматически их установить через пакетный менеджер:
+Если в системе не хватает зависимостей, то rvm предложит автоматически их установить через пакетный менеджер:
 
 {% highlight console %}
 Updating system <user> password required for 'apt-get --quiet --yes update':
