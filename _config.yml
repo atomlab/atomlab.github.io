@@ -1,5 +1,8 @@
 title:            Site Title
 description:      Describe your website here.
+=======
+title:  Atomlab Tech Notes
+description:
 disqus_shortname: hpstrtheme
 reading_time:     true
 words_per_minute: 200
@@ -10,6 +13,12 @@ url: //atomlab.github.io/hpstr-jekyll-theme
 # Owner/author information
 owner:
   name:           Your Name
+=======
+url: http://atomlab.github.io/hpstr-jekyll-theme
+
+# Owner/author information
+owner:
+  name:           Atomlab
   avatar:         avatar.jpg
   bio:            "Your bio goes here. It shouldn't be super long but a good two sentences or two should suffice."
   email:          you@email.com
@@ -22,6 +31,15 @@ owner:
   instagram:      
   flickr:         
   tumblr:         
+=======
+  twitter:
+  facebook:
+  github:
+  stackexchange:
+  linkedin:
+  instagram:
+  flickr:
+  tumblr:
   # google plus id, include the '+', eg +mmistakes
   google_plus:    +yourid
 
@@ -31,14 +49,19 @@ background:
 # Analytics and webmaster tools stuff goes here
 google_analytics:   
 google_verify:      
+=======
+google_analytics:
+google_verify:
 # https://ssl.bing.com/webmaster/configure/verify/ownership Option 2 content= goes here
-bing_verify:         
+bing_verify:
 
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    America/New_York
 future:      true
 highlighter: pygments
-markdown:    kramdown
+#markdown:    kramdown
+markdown: redcarpet
+pygments_options: ['lineanchors', 'linenos=table']
 gems:
   - jekyll-sitemap
 sass:
@@ -65,5 +88,14 @@ kramdown:
     coderay_bold_every: 10
     coderay_css: class
 
+redcarpet:
+  extensions: ["no_intra_emphasis", "tables", "autolink", "strikethrough", "with_toc_data"]
+
+
 include: [".htaccess"]
 exclude: ["lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
+=======
+
+excerpt_separator: ""   # Workaround for http://blog.slaks.net/2013-08-09/jekyll-tag-was-never-closed
+post_ext: md
+
