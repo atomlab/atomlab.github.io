@@ -40,6 +40,19 @@ print "Hello, world!"
 
 {% endhighlight %}
 
+**Установка**
+
+```
+gem install redcarpet
+```
+
+В `_config.yml`
+
+```
+markdown: redcarpet
+```
+
 **Ссылки**
 
-<https://gist.github.com/danasilver/8121699>
+* <https://github.com/vmg/redcarpet>
+* <https://gist.github.com/danasilver/8121699>
