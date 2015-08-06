@@ -23,5 +23,5 @@ date: 2015-08-03T15:12:22-04:00
 
 **Ссылки**
 
-[Статья про Vundle на Хабре](http://habrahabr.ru/post/148549/)
+* [Статья про Vundle на Хабре](http://habrahabr.ru/post/148549/)
 
