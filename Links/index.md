@@ -15,7 +15,6 @@ comments: false
 * http://jekyllthemes.org/
 * http://drjekyllthemes.github.io/
 
-<img src="/images/3953273590_704e3899d5_m.jpg" />
 
 <figure class="half">
   <img src="/images/3953273590_704e3899d5_m.jpg" />
