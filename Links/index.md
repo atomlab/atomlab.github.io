@@ -17,7 +17,7 @@ comments: false
 * 
 
 
-<img src="images/3953273590_704e3899d5_m.jpg" />
+<img src="/images/3953273590_704e3899d5_m.jpg" />
 
 image:
   feature: 3953273590_704e3899d5_m.jpg
