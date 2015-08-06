@@ -7,6 +7,7 @@ image:
   credit: 
   creditlink: 
 share: true
+comments: false
 ---
 
 **Jekyll Themes**
