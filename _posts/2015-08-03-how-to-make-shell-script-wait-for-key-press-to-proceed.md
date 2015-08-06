@@ -14,6 +14,8 @@ share:
 date: 2015-08-03T15:25:10-04:00
 ---
 
+{:toc}
+
 ```
 read -p "Press any key to continue... " -n1 -s
 ```
