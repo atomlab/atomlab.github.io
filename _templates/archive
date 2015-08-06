@@ -3,4 +3,5 @@ layout: post-index
 title: {{ title }}
 permalink:
 description:
+comments: false
 ---
