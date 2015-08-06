@@ -17,8 +17,8 @@ comments: false
 
 
 <figure class="half">
-  <img src="/images/3953273590_704e3899d5_m.jpg" />
-  <img src="/images/3953273590_704e3899d5_m.jpg" />
+  <a href="http://placehold.it/1200x600.jpg"><img src="/images/3953273590_704e3899d5_m.jpg" />
+  <a href="http://placehold.it/1200x600.jpg"><img src="/images/3953273590_704e3899d5_m.jpg" />
 <figcaption>Caption describing these two images.</figcaption>
 </figure>
 
