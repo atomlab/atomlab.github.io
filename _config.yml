@@ -1,3 +1,5 @@
+title:            Site Title
+description:      Describe your website here.
 title:  Atomlab Tech Notes
 description:
 disqus_shortname: hpstrtheme
@@ -5,7 +7,12 @@ reading_time:     true
 words_per_minute: 200
 # Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
 # When testing locally leave blank or use http://localhost:4000
-url: //atomlab.github.io
+url: //atomlab.github.io/hpstr-jekyll-theme
+
+# Owner/author information
+owner:
+  name:           Your Name
+url: http://atomlab.github.io/hpstr-jekyll-theme
 
 # Owner/author information
 owner:

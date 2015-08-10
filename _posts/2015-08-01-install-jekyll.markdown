@@ -18,10 +18,8 @@ date: 2015-08-01T10:17:54-04:00
 
 Установка rvm:
 {% highlight console %}
-aptitude install curl 
-
-gpg --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
-
+aptitude install curl nodejs
+gpg2 --keyserver hkp://keys.gnupg.net --recv-keys 409B6B1796C275462A1703113804BB82D39DC0E3
 curl -sSL https://get.rvm.io | bash -s stable --ruby
 {% endhighlight %}
 

@@ -4,7 +4,7 @@ title: Vundle. Plugin Manager for Vim
 modified:
 categories: 
 description:
-tags: [blog]
+tags: []
 image:
   feature:
   credit:
