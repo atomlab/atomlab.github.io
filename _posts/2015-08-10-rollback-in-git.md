@@ -28,3 +28,6 @@ $ git log
 $ git checkout fcdd513bff0f37cffb6af1890e1a0aa187919d03 foo
 ```
 
+**Ссылки**
+
+[Машина времени в git](http://habrahabr.ru/post/157175/)
