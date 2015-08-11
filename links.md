@@ -13,7 +13,7 @@ share:
 
 *Инструменты для сбора метрик с сервера:*
 
-[Brubeck — быстрый, statsd-совместимый агрегатор метрик от GitHub](http://habrahabr.ru/post/260971/)
+[Brubeck](http://habrahabr.ru/post/260971/) - быстрый, statsd-совместимый агрегатор метрик от GitHub.
 
 [Statsite](https://github.com/armon/statsite) - Statsite is a metrics aggregation server. Statsite is based heavily on Etsy's StatsD https://github.com/etsy/statsd, and is wire compatible.
 
