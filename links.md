@@ -9,6 +9,7 @@ image:
   credit:
   creditlink:
 share:
+comments: false
 ---
 
 **Инструменты для сбора метрик с сервера:**
