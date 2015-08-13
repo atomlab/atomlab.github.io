@@ -12,6 +12,7 @@ share:
 comments: false
 ---
 
+
 **Инструменты для сбора метрик с сервера**
 
 [Brubeck](http://habrahabr.ru/post/260971/) - быстрый, statsd-совместимый агрегатор метрик от GitHub.
@@ -24,11 +25,13 @@ comments: false
 
 [StatsD](https://github.com/etsy/statsd) - A network daemon that runs on the Node.js platform and listens for statistics, like counters and timers, sent over UDP or TCP and sends aggregates to one or more pluggable backend services (e.g., Graphite).
 
+
 **Безопасность**
 
 [Интересная презентация про пароли с DEF CON](http://www.securitylab.ru/blog/personal/itsec/148265.php)
 
 [Как не надо писать парольную политику](http://www.itsec.pro/2014/01/blog-post_23.html)
+
 
 **System**
 
