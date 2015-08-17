@@ -40,3 +40,5 @@ comments: false
 **Internet**
 
 [Обзор лучших репозиториев Github за неделю (xakep.ru)](https://goo.gl/1z81Z5)
+
+[Awesome](https://github.com/sindresorhus/awesome) - кумулятивный репозиторий со ссылками на все awesome-репозитории.
