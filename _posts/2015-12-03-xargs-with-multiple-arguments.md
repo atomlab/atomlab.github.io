@@ -25,3 +25,6 @@ Output
 ```
 this is first:argument1 second:argument2 third:argument3
 ```
+
+**Ссылки**
+http://stackoverflow.com/questions/3770432/xargs-with-multiple-arguments
