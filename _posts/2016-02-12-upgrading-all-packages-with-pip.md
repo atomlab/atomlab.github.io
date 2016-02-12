@@ -4,7 +4,7 @@ title: Upgrading All Packages With Pip
 modified:
 categories:
 description:
-tags: []
+tags: [python]
 image:
   feature:
   credit:
