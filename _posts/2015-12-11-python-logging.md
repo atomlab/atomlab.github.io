@@ -21,7 +21,7 @@ date: 2015-12-11T08:05:53-05:00
 import logging
 
 # create logger with 'spam_application'
-logger = logging.getLogger()
+logger = logging.getLogger('MY_SCRIPT')
 logger.setLevel(logging.DEBUG)
 # create file handler which logs even debug messages
 logfile = logging.FileHandler('example.log')
@@ -32,10 +32,16 @@ logfile.setFormatter(logging.Formatter("%(asctime)s - %(levelname)s - %(message)
 console = logging.StreamHandler()
 console.setLevel(logging.INFO)
 console.setFormatter(logging.Formatter('[%(levelname)s] %(message)s'))
+# Syslog
+syslog = logging.handlers.SysLogHandler(address='/dev/log', facility='daemon')
+syslog.setFormatter(logging.Formatter('%(name)s[{0}]: [%(levelname)s] %(message)s'
+                                      .format(PID)))
 # add the handlers to the logger
 logger.addHandler(logfile)
 logger.addHandler(console)
+logger.addHandler(syslog)
 
+# Test message
 logger.info('Test INFO message')
 logget.debug('Test DEBUG message')
 ```
