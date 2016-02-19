@@ -19,6 +19,7 @@ date: 2015-12-11T08:05:53-05:00
 
 ```python
 import logging
+import logging.handlers
 
 # create logger with 'spam_application'
 logger = logging.getLogger('MY_SCRIPT')
