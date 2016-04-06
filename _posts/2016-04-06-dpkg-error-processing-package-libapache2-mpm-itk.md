@@ -31,7 +31,7 @@ Errors were encountered while processing:
  apache2-mpm-itk
 ```
 
-Диактивировать модуль mpm_event и повторить установку пакета
+Деактивировать модуль mpm_event и повторить установку пакета
 
 ```
 a2dismod mpm_event
