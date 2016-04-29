@@ -38,6 +38,6 @@ To remove an older version of Golang:
 sudo rm -rf /usr/local/go
 ```
 
-** Links **
+**Links**
 
 * [How to Install GoLang 1.5 on Ubuntu](http://munchpress.com/install-golang-1-5-on-ubuntu/)
