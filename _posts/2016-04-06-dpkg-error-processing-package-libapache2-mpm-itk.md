@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Dpkg: Error Processing Package Libapache2-mpm-itk
+title: Dpkg Error Processing Package Libapache2-mpm-itk
 modified:
 categories:
 description:
