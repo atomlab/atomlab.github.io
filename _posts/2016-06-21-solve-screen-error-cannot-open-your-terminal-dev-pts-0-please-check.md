@@ -29,3 +29,8 @@ Cannot open your terminal '/dev/pts/0' - please check.
 script /dev/null
 ```
 
+**Links**
+
+* [Solve screen error "Cannot open your terminal '/dev/pts/0' - please check"](http://makandracards.com/makandra/2533-solve-screen-error-cannot-open-your-terminal-dev-pts-0-please-check)
+
+
